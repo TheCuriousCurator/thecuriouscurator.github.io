@@ -157,50 +157,54 @@
       animation: fadeIn 0.5s ease-in-out;
     }
     .calendar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .month {
-      width: 300px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      background-color: #f9f9f9;
-    }
-    .month h3 {
-      text-align: center;
-      background-color: #4a90e2;
-      color: white;
-      padding: 10px;
-      margin: 0;
-    }
-    .days {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 5px;
-      padding: 10px;
-    }
-    .day, .empty {
-      text-align: center;
-      padding: 10px;
-      border-radius: 5px;
-      background-color: #f0f8ff;
-      color: #333;
-      font-weight: bold;
-    }
-    .day.session {
-      background-color: #4a90e2;
-      color: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .day.session:hover {
-      background-color: #357ab8;
-      cursor: pointer;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .month {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #f9f9f9;
+  }
+  .month h3 {
+    text-align: center;
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px;
+    margin: 0;
+  }
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+  }
+  .day, .empty {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+    color: #333;
+    font-weight: bold;
+  }
+  .day.sunday {
+    background-color: #e6f7ff; /* Light blue for Sundays */
+    color: #4a90e2;
+  }
+  .day.session {
+    background-color: #4a90e2;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .day.session:hover {
+    background-color: #357ab8;
+    cursor: pointer;
+  }
   </style>
 </head>
 <body>
@@ -301,18 +305,95 @@
       <h2>Upcoming Cohort</h2>
       <p>The next cohort starts on <strong>16th August</strong>. Sessions will be held every Sunday for 8 weeks.</p>
       <div class="calendar">
-        <div>16 Aug</div>
-        <div>23 Aug</div>
-        <div>30 Aug</div>
-        <div>6 Sep</div>
-        <div>13 Sep</div>
-        <div>20 Sep</div>
-        <div>27 Sep</div>
-        <div>4 Oct</div>
+        <div class="month">
+          <h3>August 2025</h3>
+          <div class="days">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+            <div class="empty"></div> <!-- Empty cells for days before 1st -->
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="day">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day">5</div>
+            <div class="day">6</div>
+            <div class="day sunday">7</div> <!-- Sunday -->
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day">11</div>
+            <div class="day">12</div>
+            <div class="day">13</div>
+            <div class="day sunday session">16</div> <!-- Highlighted session -->
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day">19</div>
+            <div class="day">20</div>
+            <div class="day">21</div>
+            <div class="day sunday session">23</div> <!-- Highlighted session -->
+            <div class="day">24</div>
+            <div class="day">25</div>
+            <div class="day">26</div>
+            <div class="day">27</div>
+            <div class="day">28</div>
+            <div class="day sunday session">30</div> <!-- Highlighted session -->
+            <div class="day">31</div>
+          </div>
+        </div>
+        <div class="month">
+          <h3>September 2025</h3>
+          <div class="days">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+            <div class="empty"></div> <!-- Empty cells for days before 1st -->
+            <div class="day">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day">5</div>
+            <div class="day sunday session">6</div> <!-- Highlighted session -->
+            <div class="day">7</div>
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day">11</div>
+            <div class="day">12</div>
+            <div class="day sunday session">13</div> <!-- Highlighted session -->
+            <div class="day">14</div>
+            <div class="day">15</div>
+            <div class="day">16</div>
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day sunday session">20</div> <!-- Highlighted session -->
+            <div class="day">21</div>
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day">24</div>
+            <div class="day">25</div>
+            <div class="day sunday session">27</div> <!-- Highlighted session -->
+            <div class="day">28</div>
+            <div class="day">29</div>
+            <div class="day">30</div>
+          </div>
+        </div>
       </div>
-      <a href="enroll.html" class="button">Enroll Now</a>
     </section>
-
+    <a href="enroll.html" class="button">Enroll Now</a>
+    
     <section class="faq">
       <h2>FAQs</h2>
       <div class="faq-item">
