@@ -173,7 +173,8 @@
     margin-top: 20px;
   }
   .month {
-    width: 300px;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 400px; /* Limit the width on larger screens */
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -189,7 +190,7 @@
   }
   .days {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
     gap: 5px;
     padding: 10px;
   }
@@ -213,6 +214,19 @@
   .day.session:hover {
     background-color: #357ab8;
     cursor: pointer;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .month {
+      max-width: 100%; /* Full width on smaller screens */
+    }
+    .days {
+      gap: 3px; /* Reduce gap between days for smaller screens */
+    }
+    .day, .empty {
+      padding: 8px; /* Reduce padding for smaller screens */
+    }
   }
   .tabs-container {
     display: flex;
@@ -283,7 +297,7 @@
       <h2>Introduction</h2>
       <p>Welcome to the ML Design Thinking & Platforms Thinking course. This 8-week program is designed to help you master the principles of design thinking and platform strategies in the context of machine learning.</p>
     </section>
-
+    <a href="https://topmate.io/dksahuji/1483565/pay" class="contact-button">Have Questions? Contact Us</a>
     <section>
       <h2>Program Details</h2>
       <div class="tabs-container">
@@ -409,18 +423,35 @@
             <div class="empty"></div>
             <div class="day">1</div>
             <div class="day">2</div>
-            <div class="day">3</div>
+            <div class="day sunday session">3</div> <!-- Highlighted session -->
+            <div class="day">4</div>
+            <div class="day">5</div>
+            <div class="day">6</div>
+            <div class="day">7</div>
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day sunday session">10</div> <!-- Highlighted session -->
+            <div class="day">11</div>
+            <div class="day">12</div>
+            <div class="day">13</div>
+            <div class="day">14</div>
+            <div class="day">15</div>
+            <div class="day">16</div>
+            <div class="day sunday session">17</div> <!-- Highlighted session -->
+            <div class="day">18</div>
             <div class="day">19</div>
             <div class="day">20</div>
             <div class="day">21</div>
-            <div class="day sunday session">23</div> <!-- Highlighted session -->
-            <div class="day">24</div>
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day sunday session">24</div> <!-- Highlighted session -->
             <div class="day">25</div>
             <div class="day">26</div>
             <div class="day">27</div>
             <div class="day">28</div>
-            <div class="day sunday session">30</div> <!-- Highlighted session -->
-            <div class="day">31</div>
+            <div class="day">29</div>
+            <div class="day">30</div>
+            <div class="day sunday session">31</div> <!-- Highlighted session -->
           </div>
         </div>
         <div class="month">
@@ -452,12 +483,14 @@
             <div class="day">16</div>
             <div class="day">17</div>
             <div class="day">18</div>
+            <div class="day">19</div>
             <div class="day sunday session">20</div> <!-- Highlighted session -->
             <div class="day">21</div>
             <div class="day">22</div>
             <div class="day">23</div>
             <div class="day">24</div>
             <div class="day">25</div>
+            <div class="day">26</div>
             <div class="day sunday session">27</div> <!-- Highlighted session -->
             <div class="day">28</div>
             <div class="day">29</div>
@@ -476,7 +509,7 @@
       </div>
       <div class="faq-item">
         <button>What are the prerequisites?</button>
-        <div class="answer">Basic knowledge of ML+DL, python coding exposure, and math is required.</div>
+        <div class="answer">Basic knowledge of ML, coding, and math is required.</div>
       </div>
       <div class="faq-item">
         <button>Are the sessions live?</button>
