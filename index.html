@@ -107,21 +107,28 @@
     }
     .button, .contact-button {
       display: inline-block;
-      padding: 12px 25px;
-      background: linear-gradient(to right, #4a90e2, #6fb1fc); /* Soft blue gradient */
+      padding: 15px 30px; /* Increased padding for larger size */
+      background: linear-gradient(to right, #2f5ea3, #4a82d1); /* Darker blue gradient */
       color: white;
       text-decoration: none;
       border-radius: 25px;
       text-align: center;
-      margin: 20px 0;
+      margin: 20px auto; /* Center the button horizontally */
+      font-size: 1.1rem; /* Slightly larger font size */
       font-weight: bold;
       transition: all 0.3s ease;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .button:hover, .contact-button:hover {
-      background: linear-gradient(to right, #6fb1fc, #4a90e2); /* Reverse gradient */
+      background: linear-gradient(to right, #25497f, #3a6aa3); /* Even darker gradient on hover */
       transform: scale(1.1);
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Center the buttons */
+    .button-container {
+      text-align: center; /* Center the buttons horizontally */
+      margin-top: 20px;
     }
     .faq-item {
       margin-bottom: 15px;
@@ -284,6 +291,38 @@
       text-align: left;
     }
   }
+  footer {
+    background-color: #4a90e2; /* Soft blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+  }
+  footer .footer-container p {
+    margin: 5px 0;
+  }
+  .button.enroll {
+    display: block; /* Make the button take up the full width */
+    width: 95%; /* Full width of the container */
+    /*margin: 20px 0;  Add vertical spacing */
+    padding: 20px; /* Increased padding for a larger size */
+    background: linear-gradient(to right, #8b0000, #a52a2a); /* Dark red gradient */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    text-align: center;
+    font-size: 1.2rem; /* Slightly larger font size */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto; /* Center the button horizontally */
+  }
+  .button.enroll:hover {
+    background: linear-gradient(to right, #a52a2a, #8b0000); /* Reverse gradient on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
   </style>
 </head>
 <body>
@@ -297,7 +336,7 @@
       <h2>Introduction</h2>
       <p>Welcome to the ML Design Thinking & Platforms Thinking course. This 8-week program is designed to help you master the principles of design thinking and platform strategies in the context of machine learning.</p>
     </section>
-    <a href="https://topmate.io/dksahuji/1483565/pay" class="contact-button">Have Questions? Contact Us</a>
+    
     <section>
       <h2>Program Details</h2>
       <div class="tabs-container">
@@ -376,8 +415,6 @@
       </div>
     </section>
 
-    <a href="detailed-plan.html" class="button">View Detailed Plan</a>
-
     <section>
       <h2>Prerequisites</h2>
       <div class="tabs-container">
@@ -401,7 +438,7 @@
         </div>
       </div>
     </section>
-
+    
     <section>
       <h2>Upcoming Cohort</h2>
       <p>The next cohort starts on <strong>16th August</strong>. Sessions will be held every Sunday for 8 weeks.</p>
@@ -499,7 +536,17 @@
         </div>
       </div>
     </section>
-    <a href="https://rzp.io/rzp/curiouscuratorplatformscourse" class="button">Enroll Now</a>
+    <div class="button-container">
+      <a href="https://rzp.io/rzp/curiouscuratorplatformscourse" class="button enroll">Enroll Now</a>
+    </div>
+    
+    <div class="button-container">
+      <a href="detailed-plan.html" class="button">Download PDF Brochure</a>
+    </div>
+
+    <div class="button-container">
+      <a href="https://topmate.io/dksahuji/1483565/pay" class="contact-button">Have Questions? Contact Us</a>
+    </div>
     
     <section class="faq">
       <h2>FAQs</h2>
@@ -524,9 +571,14 @@
         <div class="answer">Refunds are available within the first week of the course.</div>
       </div>
     </section>
-
-    <a href="https://topmate.io/dksahuji/1483565/pay" class="contact-button">Have Questions? Contact Us</a>
   </div>
+
+  <footer>
+    <div class="footer-container">
+      <p><strong>CURIOUS CURATOR SERVICES LLP</strong></p>
+      <p>&copy; COPYRIGHT 2025</p>
+    </div>
+  </footer>
 
   <script>
     // JavaScript for tabs
