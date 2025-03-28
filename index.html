@@ -214,6 +214,62 @@
     background-color: #357ab8;
     cursor: pointer;
   }
+  .tabs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .tab-group {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #f0f8ff; /* Light blue */
+  }
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #4a90e2; /* Soft blue */
+    background-color: #f0f8ff;
+    transition: all 0.3s ease;
+  }
+  .tab:hover {
+    background-color: #e6f7ff; /* Lighter blue */
+  }
+  .tab-content {
+    display: none;
+    padding: 15px;
+    background-color: white;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  .tab-content.active {
+    display: block;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .tabs-container {
+      gap: 5px;
+    }
+    .tab-group {
+      border: none;
+      border-bottom: 1px solid #ddd;
+    }
+    .tab {
+      width: 100%;
+      text-align: left;
+    }
+  }
   </style>
 </head>
 <body>
@@ -230,64 +286,78 @@
 
     <section>
       <h2>Program Details</h2>
-      <div class="tabs">
-        <div class="tab active" data-tab="week1">Week 1</div>
-        <div class="tab" data-tab="week2">Week 2</div>
-        <div class="tab" data-tab="week3">Week 3</div>
-        <div class="tab" data-tab="week4">Week 4</div>
-        <div class="tab" data-tab="week5">Week 5</div>
-        <div class="tab" data-tab="week6">Week 6</div>
-        <div class="tab" data-tab="week7">Week 7</div>
-        <div class="tab" data-tab="week8">Week 8</div>
-      </div>
-      <div class="tab-content-container">
-        <div class="tab-content active" id="week1">
-          <ul>
-            <li>Introduction to ML Design Thinking</li>
-            <li>Understanding Platforms Thinking</li>
-          </ul>
+      <div class="tabs-container">
+        <div class="tab-group">
+          <div class="tab" data-tab="week1">Week 1</div>
+          <div class="tab-content" id="week1">
+            <ul>
+              <li>Introduction to ML Design Thinking</li>
+              <li>Understanding Platforms Thinking</li>
+            </ul>
+          </div>
         </div>
-        <div class="tab-content" id="week2">
-          <ul>
-            <li>Deep dive into ML frameworks</li>
-            <li>Case studies on platform strategies</li>
-          </ul>
+        <div class="tab-group">
+          <div class="tab" data-tab="week2">Week 2</div>
+          <div class="tab-content" id="week2">
+            <ul>
+              <li>Deep dive into ML frameworks</li>
+              <li>Case studies on platform strategies</li>
+            </ul>
+          </div>
         </div>
-        <div class="tab-content" id="week3">
-          <ul>
-            <li>Exploring user-centered design principles</li>
-            <li>Prototyping ML solutions</li>
-          </ul>
+        <div class="tab-group">
+          <div class="tab" data-tab="week3">Week 3</div>
+          <div class="tab-content" id="week3">
+            <ul>
+              <li>Exploring user-centered design principles</li>
+              <li>Prototyping ML solutions</li>
+            </ul>
+          </div>
         </div>
-        <div class="tab-content" id="week4">
-          <ul>
-            <li>Data-driven decision making</li>
-            <li>Platform scalability strategies</li>
-          </ul>
+        <div class="tab-group">
+          <div class="tab" data-tab="week4">Week 4</div>
+          <div class="tab-content" id="week4">
+            <ul>
+              <li>Data-driven decision making</li>
+              <li>Platform scalability strategies</li>
+            </ul>
+          </div>
         </div>
-        <div class="tab-content" id="week5">
-          <ul>
-            <li>Advanced ML algorithms</li>
-            <li>Platform monetization techniques</li>
-          </ul>
+        <div class="tab-group">
+          <div class="tab" data-tab="week5">Week 5</div>
+          <div class="tab-content" id="week5">
+            <ul>
+              <li>Advanced ML algorithms</li>
+              <li>Platform monetization techniques</li>
+            </ul>
+          </div>
         </div>
-        <div class="tab-content" id="week6">
-          <ul>
-            <li>Ethics in ML and platform design</li>
-            <li>Case studies on ethical dilemmas</li>
-          </ul>
+        <div class="tab-group">
+          <div class="tab" data-tab="week6">Week 6</div>
+          <div class="tab-content" id="week6">
+            <ul>
+              <li>Ethics in ML and platform design</li>
+              <li>Case studies on ethical dilemmas</li>
+            </ul>
+          </div>
         </div>
-        <div class="tab-content" id="week7">
-          <ul>
-            <li>Testing and validation of ML models</li>
-            <li>Platform performance optimization</li>
-          </ul>
+        <div class="tab-group">
+          <div class="tab" data-tab="week7">Week 7</div>
+          <div class="tab-content" id="week7">
+            <ul>
+              <li>Testing and validation of ML models</li>
+              <li>Platform performance optimization</li>
+            </ul>
+          </div>
         </div>
-        <div class="tab-content" id="week8">
-          <ul>
-            <li>Final project presentations</li>
-            <li>Feedback and course wrap-up</li>
-          </ul>
+        <div class="tab-group">
+          <div class="tab" data-tab="week8">Week 8</div>
+          <div class="tab-content" id="week8">
+            <ul>
+              <li>Final project presentations</li>
+              <li>Feedback and course wrap-up</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -296,20 +366,24 @@
 
     <section>
       <h2>Prerequisites</h2>
-      <div class="tabs">
-        <div class="tab active" data-tab="ml">ML</div>
-        <div class="tab" data-tab="coding">Coding</div>
-        <div class="tab" data-tab="math">Math</div>
-      </div>
-      <div class="tab-content-container">
-        <div class="tab-content active" id="ml">
-          <p>Basic understanding of machine learning concepts.</p>
+      <div class="tabs-container">
+        <div class="tab-group">
+          <div class="tab" data-tab="ml">ML</div>
+          <div class="tab-content" id="ml">
+            <p>Basic understanding of machine learning concepts.</p>
+          </div>
         </div>
-        <div class="tab-content" id="coding">
-          <p>Proficiency in Python programming.</p>
+        <div class="tab-group">
+          <div class="tab" data-tab="coding">Coding</div>
+          <div class="tab-content" id="coding">
+            <p>Proficiency in Python programming.</p>
+          </div>
         </div>
-        <div class="tab-content" id="math">
-          <p>Knowledge of linear algebra and statistics.</p>
+        <div class="tab-group">
+          <div class="tab" data-tab="math">Math</div>
+          <div class="tab-content" id="math">
+            <p>Knowledge of linear algebra and statistics.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -423,21 +497,17 @@
 
   <script>
     // JavaScript for tabs
-    document.querySelectorAll('.tabs .tab').forEach(tab => {
+    document.querySelectorAll('.tab').forEach(tab => {
       tab.addEventListener('click', () => {
-        // Remove active class from all tabs
-        document.querySelectorAll('.tabs .tab').forEach(t => t.classList.remove('active'));
-        // Add active class to the clicked tab
-        tab.classList.add('active');
+        const parentGroup = tab.parentElement;
+        const content = parentGroup.querySelector('.tab-content');
 
-        // Hide all tab contents
-        document.querySelectorAll('.tab-content').forEach(content => {
-          content.classList.remove('active');
-        });
-
-        // Show the content corresponding to the clicked tab
-        const contentId = tab.getAttribute('data-tab');
-        document.getElementById(contentId).classList.add('active');
+        // Toggle visibility of the clicked tab's content
+        const isVisible = content.classList.contains('active');
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        if (!isVisible) {
+          content.classList.add('active');
+        }
       });
     });
 
